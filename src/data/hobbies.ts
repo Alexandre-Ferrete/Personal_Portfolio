@@ -4,10 +4,10 @@ export interface Hobby {
 }
 
 export const hobbies: Hobby[] = [
-  { name: 'Sports', icon: 'FaPersonRunning' },
-  { name: 'Gym', icon: 'FaDumbbell' },
-  { name: 'Movies & TV Series', icon: 'FaClapperboard' },
-  { name: 'Gaming', icon: 'FaGamepad' },
-  { name: 'Music', icon: 'FaMusic' },
-  { name: 'Programming', icon: 'FaCode' }
+  { name: 'Sports', icon: 'PersonStanding' },
+  { name: 'Gym', icon: 'Dumbbell' },
+  { name: 'Movies & TV Series', icon: 'Clapperboard' },
+  { name: 'Gaming', icon: 'Gamepad2' },
+  { name: 'Music', icon: 'Music' },
+  { name: 'Programming', icon: 'Code' }
 ]

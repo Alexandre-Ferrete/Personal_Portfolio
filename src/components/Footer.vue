@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
 import { socials } from '@/data/socials'
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6'
+import { Github, Linkedin, Mail } from 'lucide-vue-next'
 
 const getIcon = (iconName: string) => {
   const icons: Record<string, unknown> = {
-    FaGithub,
-    FaLinkedin,
-    FaEnvelope
+    Github,
+    Linkedin,
+    Mail
   }
   return icons[iconName]
 }

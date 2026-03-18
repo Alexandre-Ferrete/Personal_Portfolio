@@ -11,49 +11,49 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    name: 'Task Manager App',
-    description: 'A productivity web application for managing tasks with real-time updates and team collaboration features.',
-    technologies: ['Vue.js', 'Node.js', 'MongoDB', 'Express'],
-    github: 'https://github.com/Alexandre-Ferrete',
+    name: 'Simple Distributed System',
+    description: 'A simple distributed system that registers products bought from stores which can be queried about.',
+    technologies: ['Java', 'TCP Sockets', 'Multithreading', 'JUnit'],
+    github: 'https://github.com/Alexandre-Ferrete/SDProject',
     demo: 'https://demo-link.com'
   },
   {
     id: 2,
-    name: 'E-Commerce Platform',
-    description: 'Full-featured e-commerce platform with shopping cart, payment integration, and admin dashboard.',
-    technologies: ['React', 'TypeScript', 'Stripe', 'PostgreSQL'],
-    github: 'https://github.com/Alexandre-Ferrete',
+    name: 'A Software System for a restaurant chain',
+    description: 'A software system developped to sustain a restaurant chain, conforming with prerequisits from all the staff.',
+    technologies: ['Java', 'PlantUML', 'VisualParadigm', 'MariaDB'],
+    github: 'https://github.com/Alexandre-Ferrete/ProjetoDSS',
     demo: 'https://demo-link.com'
   },
   {
     id: 3,
-    name: 'Weather Dashboard',
-    description: 'Real-time weather application with forecast, location-based data, and interactive maps.',
-    technologies: ['JavaScript', 'OpenWeather API', 'CSS3'],
-    github: 'https://github.com/Alexandre-Ferrete',
+    name: 'Comunication Between Rovers and a Spacial Base',
+    description: 'Real-time application that sends monitorize spacial rovers, sending missions and receiving reports.',
+    technologies: ['Java', 'TCP Sockets', 'UDP Sockets', 'HTML', 'JavaScript', 'Wireshark', 'VirtualBox', 'Core'],
+    github: 'https://github.com/Alexandre-Ferrete/ProjetoCC',
     demo: 'https://demo-link.com'
   },
   {
     id: 4,
-    name: 'Chat Application',
-    description: 'Real-time messaging app with rooms, direct messages, and file sharing capabilities.',
-    technologies: ['React', 'Socket.io', 'Node.js', 'MongoDB'],
-    github: 'https://github.com/Alexandre-Ferrete',
+    name: 'Website about AirBnB impacts',
+    description: 'Website designed to filter and extract data from long and detailed CSV, to graphs and flashcards, that can be exported.',
+    technologies: ['HTML', 'Vue.js', 'TypeScript', 'CSS'],
+    github: 'https://github.com/Alexandre-Ferrete/ProjetoIPM',
     demo: 'https://demo-link.com'
   },
   {
     id: 5,
     name: 'Portfolio Website',
     description: 'Modern responsive portfolio showcasing projects, skills, and professional background.',
-    technologies: ['Vue.js', 'TypeScript', 'TailwindCSS'],
-    github: 'https://github.com/Alexandre-Ferreite',
+    technologies: [ 'HTML','Vue.js', 'TypeScript', 'TailwindCSS'],
+    github: 'https://github.com/Alexandre-Ferrete/Personal_Portfolio',
     demo: 'https://demo-link.com'
   },
   {
     id: 6,
-    name: 'API RESTful Service',
-    description: 'Scalable RESTful API with authentication, rate limiting, and comprehensive documentation.',
-    technologies: ['Node.js', 'Express', 'TypeScript', 'Docker'],
-    github: 'https://github.com/Alexandre-Ferrete'
+    name: 'Streaming Platform',
+    description: 'Aplication like Spotify.',
+    technologies: ['Java', 'PlantUML', 'Drawio', 'Docker'],
+    github: 'https://github.com/Alexandre-Ferrete/Streaming-platform'
   }
 ]

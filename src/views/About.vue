@@ -1,22 +1,22 @@
 <script setup lang="ts">
 import { hobbies } from '@/data/hobbies'
-import { FaPersonRunning, FaDumbbell, FaClapperboard, FaGamepad, FaMusic, FaCode } from 'react-icons/fa6'
+import { Dumbbell, Clapperboard, Gamepad2, Music, Code, PersonStanding } from 'lucide-vue-next'
 
 const getIcon = (iconName: string) => {
   const icons: Record<string, unknown> = {
-    FaPersonRunning,
-    FaDumbbell,
-    FaClapperboard,
-    FaGamepad,
-    FaMusic,
-    FaCode
+    PersonStanding,
+    Dumbbell,
+    Clapperboard,
+    Gamepad2,
+    Music,
+    Code
   }
   return icons[iconName]
 }
 </script>
 
 <template>
-  <section class="min-h-screen pt-24 pb-16 bg-white dark:bg-gray-900">
+  <section id="about" class="min-h-screen pt-24 pb-16 bg-white dark:bg-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-start">
         <div>

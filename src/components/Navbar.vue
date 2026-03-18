@@ -34,7 +34,7 @@ const closeMenu = () => {
           class="text-xl font-bold text-primary hover:text-secondary transition-colors"
           @click="closeMenu"
         >
-          AF
+          <img src="/fotoPerfil.jpg" alt="AF" class="w-8 h-8 rounded-full object-cover" />
         </RouterLink>
 
         <div class="hidden md:flex items-center space-x-8">

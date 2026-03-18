@@ -1,17 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import { socials } from '@/data/socials'
-import { FaGithub, FaLinkedin, FaEnvelope, FaFileArrowDown } from 'react-icons/fa6'
-
-const getIcon = (iconName: string) => {
-  const icons: Record<string, unknown> = {
-    FaGithub,
-    FaLinkedin,
-    FaEnvelope,
-    FaFileArrowDown
-  }
-  return icons[iconName]
-}
+import { Github, Linkedin, FileDown } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -36,7 +25,7 @@ const getIcon = (iconName: string) => {
               rel="noopener noreferrer"
               class="flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
             >
-              <FaGithub class="text-xl" />
+              <Github class="text-xl" />
               GitHub
             </a>
             <a
@@ -45,13 +34,13 @@ const getIcon = (iconName: string) => {
               rel="noopener noreferrer"
               class="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-blue-600 transition-colors"
             >
-              <FaLinkedin class="text-xl" />
+              <Linkedin class="text-xl" />
               LinkedIn
             </a>
             <button
               class="flex items-center gap-2 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:border-primary hover:text-primary transition-colors"
             >
-              <FaFileArrowDown class="text-xl" />
+              <FileDown class="text-xl" />
               Download CV
             </button>
           </div>
@@ -61,7 +50,7 @@ const getIcon = (iconName: string) => {
           <div class="relative w-72 h-72 md:w-96 md:h-96">
             <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full opacity-20 animate-pulse"></div>
             <div class="relative w-full h-full bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-              <span class="text-6xl md:text-8xl font-bold text-white">AF</span>
+              <img src="/fotoPerfil.jpg" alt="Alexandre Ferrete" class="w-full h-full object-cover rounded-full" />
             </div>
           </div>
         </div>
@@ -70,12 +59,9 @@ const getIcon = (iconName: string) => {
       <div class="mt-16 flex justify-center">
         <RouterLink
           to="/about"
-          class="flex flex-col items-center text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+          class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-blue-600 transition-colors"
         >
-          <span class="text-sm mb-2">Scroll down</span>
-          <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+          Learn more about me
         </RouterLink>
       </div>
     </div>

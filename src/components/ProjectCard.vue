@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Project } from '@/data/projects'
-import { FaGithub, FaArrowUpRightFromSquare } from 'react-icons/fa6'
+import { Github, ExternalLink } from 'lucide-vue-next'
 
 defineProps<{
   project: Project
@@ -37,7 +37,7 @@ defineProps<{
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors group/btn"
         >
-          <FaGithub class="text-lg" />
+          <Github class="text-lg" />
           View Code
           <span class="absolute inset-0"></span>
         </a>
@@ -48,7 +48,7 @@ defineProps<{
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium text-sm hover:border-primary hover:text-primary transition-colors"
         >
-          <FaArrowUpRightFromSquare class="text-sm" />
+          <ExternalLink class="text-sm" />
           Demo
         </a>
       </div>

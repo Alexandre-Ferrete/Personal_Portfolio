@@ -1,22 +1,10 @@
 <script setup lang="ts">
 import { useThemeStore } from '@/stores/theme'
-import { onMounted, watchEffect } from 'vue'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
 
 const themeStore = useThemeStore()
-
-onMounted(() => {
-  themeStore.initTheme()
-})
-
-watchEffect(() => {
-  if (themeStore.isDark) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-})
+themeStore.initTheme()
 </script>
 
 <template>

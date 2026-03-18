@@ -11,7 +11,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
           My <span class="text-primary">Projects</span>
         </h1>
         <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          A collection of projects I've worked on, showcasing my skills in web development and software engineering.
+          A collection of projects I've worked on, showcasing my skills in software engineering.
         </p>
       </div>
 

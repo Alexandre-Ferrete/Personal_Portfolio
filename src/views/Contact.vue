@@ -1,14 +1,27 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { socials } from '@/data/socials'
-import { FaGithub, FaLinkedin, FaEnvelope, FaLocationDot, FaSchool } from 'react-icons/fa6'
+import { Github, Linkedin, Mail, MapPin, GraduationCap } from 'lucide-vue-next'
+
+const form = ref({
+  name: '',
+  email: '',
+  message: ''
+})
 
 const getIcon = (iconName: string) => {
   const icons: Record<string, unknown> = {
-    FaGithub,
-    FaLinkedin,
-    FaEnvelope
+    Github,
+    Linkedin,
+    Mail
   }
   return icons[iconName]
+}
+
+const sendMessage = () => {
+  const subject = encodeURIComponent(`Portfolio Contact from ${form.value.name}`)
+  const body = encodeURIComponent(`Name: ${form.value.name}\nEmail: ${form.value.email}\n\nMessage:\n${form.value.message}`)
+  window.location.href = `mailto:alexferrete05@gmail.com?subject=${subject}&body=${body}`
 }
 </script>
 
@@ -46,7 +59,7 @@ const getIcon = (iconName: string) => {
                 <div>
                   <p class="font-medium text-gray-900 dark:text-white">{{ social.name }}</p>
                   <p class="text-sm text-gray-500 dark:text-gray-400">
-                    {{ social.name === 'Email' ? 'alexandre.ferrete@email.com' : social.url.replace('https://', '') }}
+                    {{ social.name === 'Email' ? 'alexferrete05@gmail.com' : social.url.replace('https://', '') }}
                   </p>
                 </div>
               </a>
@@ -61,7 +74,7 @@ const getIcon = (iconName: string) => {
             <div class="space-y-6">
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full">
-                  <FaLocationDot class="text-xl" />
+                  <MapPin class="text-xl" />
                 </div>
                 <div>
                   <p class="font-medium text-gray-900 dark:text-white">Location</p>
@@ -71,7 +84,7 @@ const getIcon = (iconName: string) => {
               
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-full">
-                  <FaSchool class="text-xl" />
+                  <GraduationCap class="text-xl" />
                 </div>
                 <div>
                   <p class="font-medium text-gray-900 dark:text-white">University</p>
@@ -100,6 +113,7 @@ const getIcon = (iconName: string) => {
                 <input
                   type="text"
                   id="name"
+                  v-model="form.name"
                   class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Your name"
                 />
@@ -111,6 +125,7 @@ const getIcon = (iconName: string) => {
                 <input
                   type="email"
                   id="email"
+                  v-model="form.email"
                   class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="your@email.com"
                 />
@@ -123,6 +138,7 @@ const getIcon = (iconName: string) => {
               </label>
               <textarea
                 id="message"
+                v-model="form.message"
                 rows="5"
                 class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                 placeholder="Your message..."
@@ -130,13 +146,13 @@ const getIcon = (iconName: string) => {
             </div>
             
             <div class="text-center">
-              <a
-                href="mailto:alexandre.ferrete@email.com?subject=Portfolio Contact"
+              <button
+                @click="sendMessage"
                 class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-blue-600 transition-colors"
               >
-                <FaEnvelope class="text-lg" />
+                <Mail class="text-lg" />
                 Send Message
-              </a>
+              </button>
             </div>
           </form>
         </div>

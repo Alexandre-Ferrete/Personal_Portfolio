@@ -8,16 +8,16 @@ export const socials: Social[] = [
   {
     name: 'GitHub',
     url: 'https://github.com/Alexandre-Ferrete',
-    icon: 'FaGithub'
+    icon: 'Github'
   },
   {
     name: 'LinkedIn',
     url: 'https://linkedin.com/in/alexandre-ferrete',
-    icon: 'FaLinkedin'
+    icon: 'Linkedin'
   },
   {
     name: 'Email',
-    url: 'mailto:alexandre.ferrete@email.com',
-    icon: 'FaEnvelope'
+    url: 'mailto:alexferrete05@gmail.com',
+    icon: 'Mail'
   }
 ]
