@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { hobbies } from '@/data/hobbies'
 import { Dumbbell, Clapperboard, Gamepad2, Music, Code, PersonStanding } from 'lucide-vue-next'
+import { RouterLink } from 'vue-router'
 
 const getIcon = (iconName: string) => {
   const icons: Record<string, unknown> = {
@@ -54,10 +55,11 @@ const getIcon = (iconName: string) => {
           </h2>
           
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div
+            <RouterLink
               v-for="hobby in hobbies"
               :key="hobby.name"
-              class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default"
+              :to="hobby.path"
+              class="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-3">
                 <component :is="getIcon(hobby.icon)" class="text-xl" />
@@ -65,7 +67,7 @@ const getIcon = (iconName: string) => {
               <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
                 {{ hobby.name }}
               </span>
-            </div>
+            </RouterLink>
           </div>
         </div>
       </div>

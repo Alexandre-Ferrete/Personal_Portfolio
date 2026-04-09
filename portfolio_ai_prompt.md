@@ -5,8 +5,8 @@
 You are an expert senior software engineer specialized in:
 
 -   modern frontend development
--   React ecosystems
--   Next.js
+-   Vue.js ecosystem
+-   Vue 3 (Composition API)
 -   TailwindCSS
 -   developer portfolio websites
 
@@ -35,15 +35,17 @@ The website must look **clean, modern and professional**.
 
 # TECHNICAL STACK
 
-Framework: Next.js (latest stable version)
+Framework: Vue 3 (latest stable version)
 
 Language: TypeScript
 
 Styling: TailwindCSS
 
-Icons: React Icons
+Icons: Lucide Vue Next
 
-Animations (optional): Framer Motion
+State Management: Pinia
+
+Routing: Vue Router
 
 Deployment target: Vercel
 
@@ -58,45 +60,70 @@ Deployment target: Vercel
 
     /src
     /components
-    Navbar.tsx
-    Footer.tsx
-    Hero.tsx
-    ProjectCard.tsx
-    SkillBadge.tsx
+    Navbar.vue
+    Footer.vue
+    Hero.vue
+    ProjectCard.vue
+    SkillBadge.vue
+    ThemeToggle.vue
 
-    /sections
-    About.tsx
-    Projects.tsx
-    Skills.tsx
-    Contact.tsx
+    /views
+    Home.vue
+    About.vue
+    Projects.vue
+    Skills.vue
+    Contact.vue
+    
+    /views/hobbies
+    Sports.vue
+    Gym.vue
+    Movies.vue
+    Gaming.vue
+    Music.vue
+    Programming.vue
 
     /data
     projects.ts
     skills.ts
+    hobbies.ts
+    socials.ts
+    index.ts
 
-    /app
-    page.tsx
+    /stores
+    theme.ts
+
+    /router
+    index.ts
 
     /styles
     globals.css
+
+    App.vue
+    main.ts
 
 ------------------------------------------------------------------------
 
 # WEBSITE STRUCTURE
 
-The website should be a **single page portfolio** with scroll
-navigation.
+The website should be a **multi-page portfolio** with Vue Router navigation.
 
-Sections order:
+Pages order:
 
-1.  Hero
+1.  Home (contains Hero)
 2.  About
 3.  Projects
 4.  Skills
 5.  Contact
-6.  Footer
+6.  Hobbies (dropdown in navbar with individual pages)
+    -   Sports
+    -   Gym
+    -   Movies & TV Series
+    -   Gaming
+    -   Music
+    -   Programming
+7.  Footer (shared across all pages)
 
-Navigation bar should scroll to sections smoothly.
+Navigation bar should link to each page using Vue Router. Hobbies section in About page should link to individual hobby pages.
 
 ------------------------------------------------------------------------
 
@@ -118,8 +145,8 @@ Accent color: blue or purple
 
 Typography:
 
--   Inter
--   system fonts
+-   System fonts
+-   Sans-serif
 
 ------------------------------------------------------------------------
 
@@ -184,17 +211,17 @@ Each project must include:
 -   description
 -   technologies used
 -   GitHub link
--   demo link
--   screenshot
+-   demo link (optional)
 
 Example data format:
 
     {
+    id: 1,
     name: "Task Manager App",
     description: "A productivity web application for managing tasks.",
-    technologies: ["React", "Node.js", "MongoDB"],
-    github: "",
-    demo: ""
+    technologies: ["Vue.js", "Node.js", "MongoDB"],
+    github: "https://github.com/username/project",
+    demo: "https://demo-link.com"
     }
 
 ------------------------------------------------------------------------
@@ -230,19 +257,11 @@ Tools
 
 Display:
 
-Email
-
-GitHub
-
-LinkedIn
-
-Optional:
-
-Contact form with:
-
--   name
--   email
--   message
+-   Email
+-   GitHub
+-   LinkedIn
+-   Location
+-   University/Education
 
 ------------------------------------------------------------------------
 
@@ -275,7 +294,6 @@ Include:
 
 -   title tag
 -   meta description
--   OpenGraph tags
 -   favicon
 
 ------------------------------------------------------------------------

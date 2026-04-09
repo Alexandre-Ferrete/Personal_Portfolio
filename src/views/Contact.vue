@@ -1,13 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { socials } from '@/data/socials'
 import { Github, Linkedin, Mail, MapPin, GraduationCap } from 'lucide-vue-next'
-
-const form = ref({
-  name: '',
-  email: '',
-  message: ''
-})
 
 const getIcon = (iconName: string) => {
   const icons: Record<string, unknown> = {
@@ -16,12 +9,6 @@ const getIcon = (iconName: string) => {
     Mail
   }
   return icons[iconName]
-}
-
-const sendMessage = () => {
-  const subject = encodeURIComponent(`Portfolio Contact from ${form.value.name}`)
-  const body = encodeURIComponent(`Name: ${form.value.name}\nEmail: ${form.value.email}\n\nMessage:\n${form.value.message}`)
-  window.location.href = `mailto:alexferrete05@gmail.com?subject=${subject}&body=${body}`
 }
 </script>
 
@@ -96,66 +83,7 @@ const sendMessage = () => {
           </div>
         </div>
 
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-          <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-            Send a Message
-          </h2>
-          
-          <form 
-            class="space-y-6 max-w-2xl mx-auto"
-            @submit.prevent
-          >
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  v-model="form.name"
-                  class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  v-model="form.email"
-                  class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="your@email.com"
-                />
-              </div>
-            </div>
-            
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                v-model="form.message"
-                rows="5"
-                class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                placeholder="Your message..."
-              ></textarea>
-            </div>
-            
-            <div class="text-center">
-              <button
-                @click="sendMessage"
-                class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-blue-600 transition-colors"
-              >
-                <Mail class="text-lg" />
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div>
+
       </div>
     </div>
   </section>
