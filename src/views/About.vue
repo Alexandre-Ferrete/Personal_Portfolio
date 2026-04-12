@@ -27,15 +27,15 @@ const getIcon = (iconName: string) => {
           
           <div class="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
             <p>
-              I am a final year Computer Engineering student at the University of Minho.
+              I am a final year Informatics Engineering student at the University of Minho.
             </p>
             <p>
-              I enjoy learning new technologies and building software that solves real problems. 
-              My interests include software engineering, web development and continuous technical improvement.
+              I enjoy learning new technologies and building software that solves real problems. My interests include software engineering, web development and continuous technical improvement. I am naturally curious and tend to dive deeply into new areas, often dedicating significant time to mastering emerging technologies and concepts.
             </p>
             <p>
-              Throughout my academic journey, I've worked on various projects that have helped me 
-              develop strong problem-solving skills and a deep understanding of modern software development practices.
+              Throughout my academic journey, I've worked on various projects that have helped me develop strong problem-solving skills and a deep understanding of modern software development practices.
+               Additionally, I have balanced my academic responsibilities with professional experience at Quinta do Lago dos Cisnes, which strengthened my ability to manage time effectively, meet deadlines,
+              and perform well under pressure.
             </p>
           </div>
 

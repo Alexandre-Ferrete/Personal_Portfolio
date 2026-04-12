@@ -4,6 +4,7 @@ import About from '@/views/About.vue'
 import Projects from '@/views/Projects.vue'
 import Skills from '@/views/Skills.vue'
 import Contact from '@/views/Contact.vue'
+import Hobbies from '@/views/Hobbies.vue'
 import Sports from '@/views/hobbies/Sports.vue'
 import Gym from '@/views/hobbies/Gym.vue'
 import Movies from '@/views/hobbies/Movies.vue'
@@ -38,6 +39,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/hobbies',
+      name: 'hobbies',
+      component: Hobbies
     },
     {
       path: '/hobbies/sports',

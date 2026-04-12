@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { hobbies } from '@/data/hobbies'
 import { 
   PersonStanding, Dumbbell, Clapperboard, Gamepad2, 
-  Music, Code, Heart, Star, Zap 
+  Music, Code, Star 
 } from 'lucide-vue-next'
-
-const props = defineProps<{
-  hobbyName?: string
-}>()
+import { RouterLink } from 'vue-router'
 
 const iconComponents: Record<string, any> = {
   PersonStanding,
@@ -18,17 +14,6 @@ const iconComponents: Record<string, any> = {
   Music,
   Code
 }
-
-const hobby = computed(() => {
-  if (props.hobbyName) {
-    return hobbies.find(h => h.path === `/hobbies/${props.hobbyName}`)
-  }
-  return null
-})
-
-const icon = computed(() => {
-  return hobby.value ? iconComponents[hobby.value.icon] || Star : Star
-})
 </script>
 
 <template>
@@ -48,17 +33,36 @@ const icon = computed(() => {
 
       <div class="text-center mb-12">
         <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 dark:bg-blue-900/30 mb-6">
-          <component :is="icon" class="w-10 h-10 text-blue-500" />
+          <Star class="w-10 h-10 text-blue-500" />
         </div>
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-          {{ hobby?.name || 'Hobby' }}
+          Hobbies
         </h1>
         <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-          {{ hobby?.description }}
+          A collection of activities I'm passionate about.
         </p>
       </div>
 
-
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <RouterLink
+          v-for="hobby in hobbies"
+          :key="hobby.name"
+          :to="hobby.path"
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+        >
+          <div class="flex flex-col items-center text-center">
+            <div class="w-16 h-16 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-blue-500 rounded-full mb-4">
+              <component :is="iconComponents[hobby.icon] || Star" class="w-8 h-8" />
+            </div>
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              {{ hobby.name }}
+            </h2>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              {{ hobby.description.split('.')[0] }}.
+            </p>
+          </div>
+        </RouterLink>
+      </div>
     </div>
   </section>
 </template>

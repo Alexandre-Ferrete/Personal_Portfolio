@@ -5,27 +5,17 @@ import ThemeToggle from './ThemeToggle.vue'
 
 const route = useRoute()
 const isMenuOpen = ref(false)
-const isHobbiesOpen = ref(false)
 
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
+  { name: 'Hobbies', path: '/hobbies' },
   { name: 'Projects', path: '/projects' },
   { name: 'Skills', path: '/skills' },
   { name: 'Contact', path: '/contact' }
 ]
 
-const hobbies = [
-  { name: 'Sports', path: '/hobbies/sports' },
-  { name: 'Gym', path: '/hobbies/gym' },
-  { name: 'Movies', path: '/hobbies/movies' },
-  { name: 'Gaming', path: '/hobbies/gaming' },
-  { name: 'Music', path: '/hobbies/music' },
-  { name: 'Programming', path: '/hobbies/programming' }
-]
-
 const isActive = (path: string) => route.path === path
-const isHobbyActive = () => route.path.startsWith('/hobbies')
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -58,38 +48,6 @@ const closeMenu = () => {
           >
             {{ link.name }}
           </RouterLink>
-          
-          <div 
-            class="relative"
-            @mouseenter="isHobbiesOpen = true"
-            @mouseleave="isHobbiesOpen = false"
-          >
-            <button
-              class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors font-medium flex items-center gap-1"
-              :class="{ 'text-blue-500 dark:text-blue-400': isHobbyActive() }"
-            >
-              Hobbies
-              <svg class="w-4 h-4 transition-transform" :class="{ 'rotate-180': isHobbiesOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            
-            <div 
-              v-show="isHobbiesOpen"
-              class="absolute top-full left-0 mt-1 w-40 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1"
-            >
-              <RouterLink
-                v-for="hobby in hobbies"
-                :key="hobby.path"
-                :to="hobby.path"
-                class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                :class="{ 'text-blue-500 dark:text-blue-400 bg-gray-100 dark:bg-gray-700': isActive(hobby.path) }"
-                @click="isHobbiesOpen = false"
-              >
-                {{ hobby.name }}
-              </RouterLink>
-            </div>
-          </div>
           
           <ThemeToggle />
         </div>
@@ -126,18 +84,6 @@ const closeMenu = () => {
           @click="closeMenu"
         >
           {{ link.name }}
-        </RouterLink>
-        <div class="border-t border-gray-200 dark:border-gray-700 my-2"></div>
-        <p class="px-3 py-2 text-sm font-medium text-gray-500 dark:text-gray-400">Hobbies</p>
-        <RouterLink
-          v-for="hobby in hobbies"
-          :key="hobby.path"
-          :to="hobby.path"
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          :class="{ 'text-blue-500 dark:text-blue-400 bg-gray-100 dark:bg-gray-800': isActive(hobby.path) }"
-          @click="closeMenu"
-        >
-          {{ hobby.name }}
         </RouterLink>
       </div>
     </div>
