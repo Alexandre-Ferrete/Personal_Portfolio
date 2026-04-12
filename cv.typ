@@ -88,7 +88,3 @@ Sports (football, tennis, ping-pong, orienteering), gym (regular training, disci
 #section("Extracurricular Experience")
 Collaborator at CESIUM – Marketing and Communication Department \
 Contributed to the development of communication strategies, content creation, and promotion of student initiatives, strengthening teamwork, creativity, and organizational skills.
-
-// ==================== WHY [COMPANY] ====================
-#section("Why Checkmarx?")
-Informatics Engineering student seeking a Summer Internship at Checkmarx, with a strong interest in cybersecurity and secure software development. Familiar with secure coding principles and concepts such as the OWASP Top 10, I am motivated to deepen my understanding of application security, including vulnerability detection and static code analysis. I am eager to contribute to the development of secure, high-quality software while growing in a fast-paced, security-driven environment through continuous learning and hands-on experience.

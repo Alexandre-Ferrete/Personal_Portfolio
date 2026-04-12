@@ -37,12 +37,14 @@ import { Github, Linkedin, FileDown } from 'lucide-vue-next'
               <Linkedin class="text-xl" />
               LinkedIn
             </a>
-            <button
+            <a
+              href="/cv.pdf"
+              download="Alexandre_Ferrete_CV.pdf"
               class="flex items-center gap-2 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:border-primary hover:text-primary transition-colors"
             >
               <FileDown class="text-xl" />
               Download CV
-            </button>
+            </a>
           </div>
         </div>
 
