@@ -25,7 +25,7 @@
     #linebreak()
     #text(size: 10pt, style: "italic")[Informatics Engineering Student]
     #linebreak()
-    #text(size: 8pt)[alexferrete05\@gmail.com  •  github.com/Alexandre-Ferrete  •  linkedin.com/in/alexandre-ferrete  •  alexandre-ferretes-projects.vercel.app]
+    #text(size: 8pt)[alexferrete05\@gmail.com  •  github.com/Alexandre-Ferrete  •  linkedin.com/in/alexandre-ferrete  •  https://personal-portfolio-a7n8.vercel.app]
   ]
 )
 
