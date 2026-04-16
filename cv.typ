@@ -86,9 +86,8 @@ Sports (football, tennis, ping-pong, orienteering), gym (regular training, disci
 
 // ==================== EXTRACURRICULAR EXPERIENCE ====================
 #section("Extracurricular Experience")
-Collaborator at CESIUM – Marketing and Communication Department \
-Contributed to the development of communication strategies, content creation, and promotion of student initiatives, strengthening teamwork, creativity, and organizational skills.
-
+*Marketing & Communication Collaborator* — CESIUM (UMinho) \
+Beyond the keyboard, I help bridge the gap between our engineering community and the public. My time at CESIUM has taught me how to communicate technical ideas clearly and how to coordinate with a team to hit deadlines—skills I believe are vital for a successful internship.
 // ==================== WHY ACCENTURE? ====================
 #section("Why Accenture?")
-As a final-year student at the University of Minho, I have developed a robust technical foundation in Java, Web Technologies, and Distributed Systems. My experience as a collaborator at CESIUM has honed my ability to communicate effectively and work within multidisciplinary teams. I am eager to apply my problem-solving skills and passion for continuous improvement  to Accenture’s innovative projects in Braga, contributing to the delivery of high-impact technology solutions.
+I am looking for a summer internship where I can be challenged by real-world complexity. Accenture’s reputation for "delivering on the promise of technology" aligns perfectly with my desire to build software that actually matters. I am particularly interested in the Braga office's innovative culture, and I am eager to learn from Accenture’s world-class mentors while contributing my skills in Java and Web Development to your current projects.
