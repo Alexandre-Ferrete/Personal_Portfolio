@@ -87,7 +87,7 @@ Sports (football, tennis, ping-pong, orienteering), gym (regular training, disci
 // ==================== EXTRACURRICULAR EXPERIENCE ====================
 #section("Extracurricular Experience")
 *Marketing & Communication Collaborator* — CESIUM (UMinho) \
-Beyond the keyboard, I help bridge the gap between our engineering community and the public. My time at CESIUM has taught me how to communicate technical ideas clearly and how to coordinate with a team to hit deadlines—skills I believe are vital for a successful internship.
+Beyond the keyboard, I help bridge the gap between our engineering community and the public. My time at CESIUM has taught me how to communicate technical ideas clearly and how to coordinate with a team to hit deadlines—skills I believe are vital for a team work environment.
 // ==================== WHY ACCENTURE? ====================
 #section("Why Accenture?")
 I am looking for a summer internship where I can be challenged by real-world complexity. Accenture’s reputation for "delivering on the promise of technology" aligns perfectly with my desire to build software that actually matters. I am particularly interested in the Braga office's innovative culture, and I am eager to learn from Accenture’s world-class mentors while contributing my skills in Java and Web Development to your current projects.
