@@ -15,7 +15,6 @@ export const projects: Project[] = [
     description: 'A simple distributed system that registers products bought from stores which can be queried about.',
     technologies: ['Java', 'TCP Sockets', 'Multithreading', 'JUnit'],
     github: 'https://github.com/Alexandre-Ferrete/SDProject',
-    demo: 'https://demo-link.com'
   },
   {
     id: 2,
@@ -23,7 +22,6 @@ export const projects: Project[] = [
     description: 'A software system developped to sustain a restaurant chain, conforming with prerequisits from all the staff.',
     technologies: ['Java', 'PlantUML', 'VisualParadigm', 'MariaDB'],
     github: 'https://github.com/Alexandre-Ferrete/ProjetoDSS',
-    demo: 'https://demo-link.com'
   },
   {
     id: 3,
@@ -31,7 +29,6 @@ export const projects: Project[] = [
     description: 'Real-time application that sends monitorize spacial rovers, sending missions and receiving reports.',
     technologies: ['Java', 'TCP Sockets', 'UDP Sockets', 'HTML', 'JavaScript', 'Wireshark', 'VirtualBox', 'Core'],
     github: 'https://github.com/Alexandre-Ferrete/ProjetoCC',
-    demo: 'https://demo-link.com'
   },
   {
     id: 4,
@@ -39,7 +36,6 @@ export const projects: Project[] = [
     description: 'Website designed to filter and extract data from long and detailed CSV, to graphs and flashcards, that can be exported.',
     technologies: ['HTML', 'Vue.js', 'TypeScript', 'CSS'],
     github: 'https://github.com/Alexandre-Ferrete/ProjetoIPM',
-    demo: 'https://demo-link.com'
   },
   {
     id: 5,
@@ -47,7 +43,6 @@ export const projects: Project[] = [
     description: 'Modern responsive portfolio showcasing projects, skills, and professional background.',
     technologies: [ 'HTML','Vue.js', 'TypeScript', 'TailwindCSS'],
     github: 'https://github.com/Alexandre-Ferrete/Personal_Portfolio',
-    demo: 'https://demo-link.com'
   },
   {
     id: 6,
